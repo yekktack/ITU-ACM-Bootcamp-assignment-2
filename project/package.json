@@ -1,0 +1,17 @@
+{
+  "name": "devteam-bootcamp-2026-project",
+  "version": "1.0.0",
+  "description": "İTÜ ACM DevTeam Bootcamp 2026 — Todo API projesi",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "test:bonus": "node --test \"tests-bonus/**/*.test.js\""
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
