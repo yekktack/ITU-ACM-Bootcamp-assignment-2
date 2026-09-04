@@ -9,12 +9,15 @@ server.use(express.json());
 
 server.use("/todos", todosRouter);
 
-server.use(notFoundHandler);
-server.use(globalErrorHandler);
-
 server.get("/", (req, res) => {
   res.send("Hello World");
 });
+
+
+server.use(notFoundHandler);
+server.use(globalErrorHandler);
+
+
 
 server.listen(3000, () => {
   console.log("Server is running on port 3000");

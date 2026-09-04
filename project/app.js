@@ -9,11 +9,12 @@ server.use(express.json());
 
 server.use("/todos", todosRouter);
 
-server.use(notFoundHandler);
-server.use(globalErrorHandler);
-
 server.get("/", (req, res) => {
   res.send("Hello World");
 });
+
+server.use(notFoundHandler);
+server.use(globalErrorHandler);
+
 
 export default server;

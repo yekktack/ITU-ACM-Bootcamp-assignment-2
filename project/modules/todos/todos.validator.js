@@ -23,3 +23,12 @@ export const validateAddTodo = (req, res, next) => {
 //
 // Hatırlatma: hata durumunda next() ÇAĞIRMAYIN — zinciri 400 ile kesin.
 // Ve res.status(400).json(...) satırının başına return koymayı unutmayın.
+
+
+// Typescript kullanmadığımız için bu kontrolleri yapmak çok zor ve zahmetli.
+// Ben de araştırdım ettim ve zod diye bir şey buldum.
+// Zod kullanarak yeniden yaz
+export const validateReplaceTodo = (req, res, next) => {
+  if((typeof req.body.title !== "string" )|| (typeof req.body.description !== "string")
+      || (typeof req.body.id !== "string")|| (req.body.description.length = 0 ))
+}
