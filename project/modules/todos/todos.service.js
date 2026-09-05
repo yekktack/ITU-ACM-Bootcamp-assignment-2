@@ -37,16 +37,18 @@ export const updateTodo = (id, fields) => {
   if(!todo) return;
 
   if (fields.completed !== undefined) todo.completed = fields.completed;
-  if (fields.title) todo.title = fields.title;
-  if (fields.description) todo.description = fields.description;
+  if (fields.title !== undefined) todo.title = fields.title;
+  if (fields.description !== undefined) todo.description = fields.description;
 
   return todo;
 }
 
 export const deleteTodo = (id) => {
   const i = todos.findIndex(todo => todo.id === id)
-  if (i < 0) return;
-  todos.splice(i,1)
+  if (i < 0) return false;
+
+  todos.splice(i, 1);
+  return true;
 }
 
 export const replaceTodo = (id, title, description) => {
